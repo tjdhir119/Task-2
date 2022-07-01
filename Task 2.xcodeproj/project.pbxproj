@@ -89,7 +89,6 @@
 				A44F12E42D533B61B3506DC0 /* Pods-Task 2.debug.xcconfig */,
 				1C0568285D953288FF2B53C9 /* Pods-Task 2.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
