@@ -22,7 +22,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MhI-zP-j6X" userLabel="TopView">
                                         <rect key="frame" x="0.0" y="0.0" width="314" height="252.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vr1-SW-wsB">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vr1-SW-wsB" userLabel="LoginLabel">
                                                 <rect key="frame" x="107.5" y="103" width="99.5" height="47"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="40"/>
                                                 <color key="textColor" systemColor="systemRedColor"/>
@@ -57,6 +57,7 @@
                                                 <buttonConfiguration key="configuration" style="filled" title="Login"/>
                                                 <connections>
                                                     <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="puD-0V-d2h"/>
+                                                    <segue destination="Lhn-Qj-e1e" kind="presentation" id="Oay-hN-eIT"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -82,7 +83,7 @@
                                                     <action selector="facebookButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Szf-Xz-8hb"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g9B-UX-8Q8">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g9B-UX-8Q8" userLabel="GoogleButton">
                                                 <rect key="frame" x="0.0" y="133.5" width="314" height="52"/>
                                                 <color key="tintColor" systemColor="systemRedColor"/>
                                                 <state key="normal" title="Button"/>
@@ -110,6 +111,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="GoogleButton" destination="g9B-UX-8Q8" id="eDo-vI-VjG"/>
+                        <outlet property="LoginLabel" destination="vr1-SW-wsB" id="jce-mP-4ly"/>
                         <outlet property="emailTextField" destination="ZE6-SS-2iT" id="O21-sF-2fq"/>
                         <outlet property="passwordTextField" destination="9Jk-qo-fif" id="bT1-ph-MsE"/>
                     </connections>
@@ -117,6 +120,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="34.782608695652179" y="93.75"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="XT3-xV-qOT">
+            <objects>
+                <tableViewController id="Lhn-Qj-e1e" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="J3C-1S-yXD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="u6x-3f-BKf">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="u6x-3f-BKf" id="E0s-A4-X2X">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Lhn-Qj-e1e" id="B1y-mv-pni"/>
+                            <outlet property="delegate" destination="Lhn-Qj-e1e" id="QcG-2m-gq6"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Rb-vS-yqW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="925" y="94"/>
         </scene>
     </scenes>
     <resources>

@@ -54,7 +54,7 @@
 		BF5014E0286F2F2A008C1D73 /* Task 2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Task 2UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF5014E4286F2F2A008C1D73 /* Task_2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task_2UITests.swift; sourceTree = "<group>"; };
 		BF5014E6286F2F2A008C1D73 /* Task_2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task_2UITestsLaunchTests.swift; sourceTree = "<group>"; };
-		BF5014F3286F316A008C1D73 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		BF5014F3286F316A008C1D73 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +166,7 @@
 				BF5014BD286F2F25008C1D73 /* Frameworks */,
 				BF5014BE286F2F25008C1D73 /* Resources */,
 				9A960220DEB180C3CEBF4770 /* [CP] Embed Pods Frameworks */,
+				E8CABE735B9EAB2B1250AC48 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -321,6 +322,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Task 2/Pods-Task 2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8CABE735B9EAB2B1250AC48 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Task 2/Pods-Task 2-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Task 2/Pods-Task 2-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Task 2/Pods-Task 2-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

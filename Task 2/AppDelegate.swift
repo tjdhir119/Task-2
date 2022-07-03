@@ -15,52 +15,62 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         // Initialize Google sign-in
-        GIDSignIn.sharedInstance().clientID = "[OAuth_Client_ID]"
-        GIDSignIn.sharedInstance().delegate = self
+//        GIDSignIn.sharedInstance().clientID = "750178652941-0clsch88sa0p1sqehqh2l1q6gff8lsjt.apps.googleusercontent.com"
+//        GIDSignIn.sharedInstance().delegate = self
 
         // If user already sign in, restore sign-in state.
-        GIDSignIn.sharedInstance()?.restorePreviousSignIn()
+        //GIDSignIn.sharedInstance()?.restorePreviousSignIn()
         
         return true
     }
     
-    func application(_ app: UIApplication,
-                     open url: URL,
-                     options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool {
-        
-        return GIDSignIn.sharedInstance().handle(url)
-    }
+//    func application(_ app: UIApplication,
+//                     open url: URL,
+//                     options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool {
+//
+//        //return GIDSignIn.sharedInstance().handle(url)
+//        return GIDSignIn.sharedInstance().handle(url, sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
+//                                                 annotation: [:])
+//    }
 }
 
-extension AppDelegate: GIDSignInDelegate {
-    
-    func sign(_ signIn: GIDSignIn!,
-              didSignInFor user: GIDGoogleUser!,
-              withError error: Error!) {
-        
-        // Check for sign in error
-        if let error = error {
-            if (error as NSError).code == GIDSignInErrorCode.hasNoAuthInKeychain.rawValue {
-                print("The user has not signed in before or they have since signed out.")
-            } else {
-                print("\(error.localizedDescription)")
-            }
-            return
-        }
-
-        // Post notification after user successfully sign in
-        NotificationCenter.default.post(name: .signInGoogleCompleted, object: nil)
-    }
-}
-
-// MARK:- Notification names
-extension Notification.Name {
-    
-    /// Notification when user successfully sign in using Google
-    static var signInGoogleCompleted: Notification.Name {
-        return .init(rawValue: #function)
-    }
-}
+//extension AppDelegate: GIDSignInDelegate {
+//
+//    func sign(_ signIn: GIDSignIn!,
+//              didSignInFor user: GIDGoogleUser!,
+//              withError error: Error!) {
+//
+//        // Check for sign in error
+//        if let error = error {
+//            if (error as NSError).code == GIDSignInErrorCode.hasNoAuthInKeychain.rawValue {
+//                print("The user has not signed in before or they have since signed out.")
+//            } else {
+//                print("\(error.localizedDescription)")
+//            }
+//            return
+//        }
+//
+//        // Post notification after user successfully sign in
+//        NotificationCenter.default.post(name: .signInGoogleCompleted, object: nil)
+//    }
+//
+//    func viewWillAppear(_ animated: Bool) {
+//        //super.viewWillAppear(true)
+//
+//        //GIDSignIn.sharedInstance().uiDelegate = self
+//        GIDSignIn.sharedInstance().delegate = self
+//    }
+//
+//}
+//
+//// MARK:- Notification names
+//extension Notification.Name {
+//
+//    /// Notification when user successfully sign in using Google
+//    static var signInGoogleCompleted: Notification.Name {
+//        return .init(rawValue: #function)
+//    }
+// }
 
 
 //import UIKit
