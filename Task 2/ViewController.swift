@@ -29,6 +29,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
         // Do any additional setup after loading the view.
         //GIDSignIn.sharedInstance.ViewController = self
         //GIDSignIn.sharedInstance().signIn(with: config, presenting: self)

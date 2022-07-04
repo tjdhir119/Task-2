@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		6BDAF72914C3B35AB4C93103 /* Pods_Task_2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 377F7B249A25092663AD3DF4 /* Pods_Task_2.framework */; };
+		BF4561EB28731CC10032300A /* TViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4561EA28731CC10032300A /* TViewController.swift */; };
+		BF4561F0287326CE0032300A /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4561EE287326CE0032300A /* MyCollectionViewCell.swift */; };
+		BF4561F1287326CE0032300A /* MyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF4561EF287326CE0032300A /* MyCollectionViewCell.xib */; };
+		BF4561F4287327020032300A /* CollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4561F2287327020032300A /* CollectionTableViewCell.swift */; };
+		BF4561F5287327020032300A /* CollectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF4561F3287327020032300A /* CollectionTableViewCell.xib */; };
 		BF5014C4286F2F25008C1D73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5014C3286F2F25008C1D73 /* AppDelegate.swift */; };
 		BF5014C6286F2F25008C1D73 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5014C5286F2F25008C1D73 /* SceneDelegate.swift */; };
 		BF5014C8286F2F25008C1D73 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5014C7286F2F25008C1D73 /* ViewController.swift */; };
@@ -41,6 +46,11 @@
 		1C0568285D953288FF2B53C9 /* Pods-Task 2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Task 2.release.xcconfig"; path = "Target Support Files/Pods-Task 2/Pods-Task 2.release.xcconfig"; sourceTree = "<group>"; };
 		377F7B249A25092663AD3DF4 /* Pods_Task_2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Task_2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A44F12E42D533B61B3506DC0 /* Pods-Task 2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Task 2.debug.xcconfig"; path = "Target Support Files/Pods-Task 2/Pods-Task 2.debug.xcconfig"; sourceTree = "<group>"; };
+		BF4561EA28731CC10032300A /* TViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TViewController.swift; sourceTree = "<group>"; };
+		BF4561EE287326CE0032300A /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
+		BF4561EF287326CE0032300A /* MyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCollectionViewCell.xib; sourceTree = "<group>"; };
+		BF4561F2287327020032300A /* CollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTableViewCell.swift; sourceTree = "<group>"; };
+		BF4561F3287327020032300A /* CollectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionTableViewCell.xib; sourceTree = "<group>"; };
 		BF5014C0286F2F25008C1D73 /* Task 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Task 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF5014C3286F2F25008C1D73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF5014C5286F2F25008C1D73 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,10 +131,15 @@
 				BF5014C3286F2F25008C1D73 /* AppDelegate.swift */,
 				BF5014C5286F2F25008C1D73 /* SceneDelegate.swift */,
 				BF5014C7286F2F25008C1D73 /* ViewController.swift */,
+				BF4561EA28731CC10032300A /* TViewController.swift */,
 				BF5014C9286F2F25008C1D73 /* Main.storyboard */,
 				BF5014CC286F2F29008C1D73 /* Assets.xcassets */,
 				BF5014CE286F2F29008C1D73 /* LaunchScreen.storyboard */,
 				BF5014D1286F2F29008C1D73 /* Info.plist */,
+				BF4561EE287326CE0032300A /* MyCollectionViewCell.swift */,
+				BF4561EF287326CE0032300A /* MyCollectionViewCell.xib */,
+				BF4561F2287327020032300A /* CollectionTableViewCell.swift */,
+				BF4561F3287327020032300A /* CollectionTableViewCell.xib */,
 			);
 			path = "Task 2";
 			sourceTree = "<group>";
@@ -261,6 +276,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF4561F1287326CE0032300A /* MyCollectionViewCell.xib in Resources */,
+				BF4561F5287327020032300A /* CollectionTableViewCell.xib in Resources */,
 				BF5014D0286F2F29008C1D73 /* LaunchScreen.storyboard in Resources */,
 				BF5014CD286F2F29008C1D73 /* Assets.xcassets in Resources */,
 				BF5014F4286F316A008C1D73 /* Podfile in Resources */,
@@ -349,8 +366,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF5014C8286F2F25008C1D73 /* ViewController.swift in Sources */,
+				BF4561F4287327020032300A /* CollectionTableViewCell.swift in Sources */,
+				BF4561F0287326CE0032300A /* MyCollectionViewCell.swift in Sources */,
 				BF5014C4286F2F25008C1D73 /* AppDelegate.swift in Sources */,
 				BF5014C6286F2F25008C1D73 /* SceneDelegate.swift in Sources */,
+				BF4561EB28731CC10032300A /* TViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
